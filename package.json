@@ -1,0 +1,25 @@
+{
+  "name": "xrpl-commons-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy-token": "hardhat run --network evmSidechain scripts/deploy-token.ts",
+    "deploy-voting": "hardhat run --network evmSidechain scripts/deploy-voting.ts",
+    "buy": "hardhat run --network evmSidechain scripts/buy.ts",
+    "create-proposal": "hardhat run --network evmSidechain scripts/create-proposal.ts",
+    "vote-proposal": "hardhat run --network evmSidechain scripts/vote-proposal.ts",
+    "flatten": "hardhat flatten > Flattened.sol",
+    "send-mainchain": "ts-node ./scripts/send-mainchain.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.0.0",
+    "ethers": "5.7",
+    "hardhat": "^2.22.2",
+    "xchain-sdk": "^1.2.5",
+    "xrpl": "3.0.0"
+  }
+}
